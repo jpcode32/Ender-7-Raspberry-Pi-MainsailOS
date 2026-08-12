@@ -1,11 +1,11 @@
 # Ender-7-Raspberry-Pi-MainsailOS Conversion
-I am creating a tutorial to control an Ender7 3D printer with a pi using mainsailOS, I will try to make this so that anyone even you have never played with linux before can follow it
+I am creating a tutorial to control an Ender7 3D printer with a pi using mainsailOS, I will try to make this so that anyone even if you have never played with linux before can follow it.
 
-I am using parts I already had leftover and did not buy new parts I am starting with:
+I am using parts I already had. I am starting with:
 - Ender 7
 - Pi 3
 - Pi 3 Charger
-- small non-touchscreen so see what the pi is doing
+- small non-touchscreen to see what the pi is doing (you don't need this)
 - 32 gig Micro SD card
 - USB to USB type C cable (pi to ender 7)
 
@@ -47,6 +47,8 @@ Next you can put the card in you pi and plug it in and let it power on.
 - <img width="384" height="95" alt="SSH" src="https://github.com/user-attachments/assets/c8c70b32-1aef-4e28-b02b-0c21d4b116c5" />
 - Type "yes" hit enter, enter your password and hit enter and you should see this telling you that you have logged into your pi username@hostname so for me jpcode@Ender7Red
 - <img width="780" height="242" alt="password" src="https://github.com/user-attachments/assets/d35a16a0-71e3-4805-a8f2-45fc844a3b83" />
+
+- Need to stop for the night. This is my first post to gitHub so please be patient with me.
 
 
 
