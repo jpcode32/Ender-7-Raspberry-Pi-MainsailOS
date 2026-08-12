@@ -48,9 +48,42 @@ Next you can put the card in you pi and plug it in and let it power on.
 - Type "yes" hit enter, enter your password and hit enter and you should see this telling you that you have logged into your pi username@hostname so for me jpcode@Ender7Red
 - <img width="780" height="242" alt="password" src="https://github.com/user-attachments/assets/d35a16a0-71e3-4805-a8f2-45fc844a3b83" />
 
-- Need to stop for the night. This is my first post to gitHub so please be patient with me.
+- Optional update and upgrade the pi "sudo apt update" and "sudo apt upgrade"
 
+## Part Three: Install and configure Klipper for the Ender 7
+- From the command prompt on your computer ssh username@ipaddress into the pi
+- type "systemctl status klipper"
+-  You should see this: jpcode@MainsailGreen:~ $ systemctl status klipper
+● klipper.service - Klipper 3D Printer Firmware SV1
+     Loaded: loaded (/etc/systemd/system/klipper.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2026-04-20 17:13:38 PDT; 52min ago
+ Invocation: 6d56aa102a234417a024d985293198ad
+       Docs: https://www.klipper3d.org/
+   Main PID: 952 (python)
+      Tasks: 2 (limit: 704)
+        CPU: 37.356s
+     CGroup: /system.slice/klipper.service
+             └─952 /home/jpcode/klippy-env/bin/python /home/jpcode/klipper/klippy/klippy.py /home/jpcode/printer_data/config/printer.cfg -l /home/jpcode/printer_data/logs/>
 
+Apr 20 17:13:38 MainsailGreen systemd[1]: Started klipper.service - Klipper 3D Printer Firmware SV1.
+lines 1-12/12 (END)
+- Type q to exit
+
+- Now we are going to configure the Klipper firmware to be compatible with the stock hardware of the Ender 7
+- type "cd ~/klipper" in the command prompt
+- type "make menuconfig" Now you have to select these items
+- Micro-controller Architecture: STMicroelectronics STM32
+- Processor model: STM32F103
+- Bootloader offset: 28KiB bootloader
+- Communication interface: Serial (USART1 PA10/PA9)
+- STEPPER_STEP_BOTH_EDGE
+-q to quit y to save Now that we have the make menu config set it is time to make the firmware
+- type "make" and the new firmware will be at ~klipper/out/klipper.binls type "cd out" then "ls" you should see this.
+- <img width="1216" height="161" alt="klipper" src="https://github.com/user-attachments/assets/f0e3a3fb-c1a3-4fbb-97c5-bf04ce0586dc" />
+
+## Part 4 Flash the Klipper firmware on to the Ender 7 controller board
+
+ 
 
 
 
